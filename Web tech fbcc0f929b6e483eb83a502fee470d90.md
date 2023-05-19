@@ -183,10 +183,10 @@ Breakpoints are customizable widths that determine how your responsive layout be
 •	Breakpoints are the building blocks of responsive design. Use them to control when your layout can be adapted at a particular viewport or device size.
 •	Use media queries to architect your CSS by breakpoint. Media queries are a feature of CSS that allow you to conditionally apply styles based on a set of browser and operating system parameters. We most commonly use min-width in our media queries.
 •	Mobile first, responsive design is the goal. Bootstrap’s CSS aims to apply the bare minimum of styles to make a layout work at the smallest breakpoint, and then layers on styles to adjust that design for larger devices. This optimizes your CSS, improves rendering time, and provides a great experience for your visitors.
-Containers
+**Containers**
 Containers are a fundamental building block of Bootstrap that contain, pad, and align your content within a given device or viewport.
 Containers are the most basic layout element in Bootstrap and are required when using our default grid system. Containers are used to contain, pad, and (sometimes) center the content within them. While containers can be nested, most layouts do not require a nested container.
-Bootstrap comes with three different containers:
+*Bootstrap comes with three different containers:
 .container, which sets a max-width at each responsive breakpoint
 .container-{breakpoint}, which is width: 100% until the specified breakpoint
 .container-fluid, which is width: 100% at all breakpoints
@@ -196,7 +196,15 @@ Small≥576px
 Medium≥768px
 Large≥992px
 X-Large≥1200px
-XX-Large≥1400px
+XX-Large≥1400px   
+
+ .container
+100%
+540px
+720px
+960px
+1140px
+1320px
 
 .container
 100%
@@ -254,12 +262,12 @@ XX-Large≥1400px
 100%
 100%
 
-Default Containers
+**Default Containers**
 Our default .container class is a responsive, fixed-width container, meaning its max-width changes at each breakpoint.
 <div class="container">
 <!-- Content here -->
 </div>
-Responsive containers
+**Responsive containers**
 Responsive containers allow you to specify a class that is 100% wide until the specified breakpoint is reached, after which we apply max-widths for each of the higher breakpoints. For example, .container-sm is 100% wide to start until the sm breakpoint is reached, where it will scale up with md, lg, xl, and xxl.
 <div class="container-sm">100% wide until small breakpoint</div>
 <div class="container-md">100% wide until medium breakpoint</div>
@@ -271,7 +279,7 @@ Use .container-fluid for a full width container, spanning the entire width of th
 <div class="container-fluid">
 ...
 </div>
-Grid System
+**Grid System**
 Bootstrap's grid system allows up to 12 columns across the page.
 If you do not want to use all 12 columns individually, you can group the columns together to create wider columns:
 Grid classes
@@ -281,7 +289,8 @@ sm (for tablets - screens equal to or greater than 768px wide)
 md (for small laptops - screens equal to or greater than 992px wide)
 lg (for laptops and desktops - screens equal to or greater than 1200px wide)
 The classes above can be combined to create more dynamic and flexible layouts.
-How it works
+
+**How it works**
 Breaking it down, here’s how the grid system comes together:
 Our grid supports six responsive breakpoints. Breakpoints are based on min-width media queries, meaning they affect that breakpoint and all those above it (e.g., .col-sm-4 applies to sm, md, lg, xl, and xxl). This means you can control container and column sizing and behavior by each breakpoint.
 Our grid supports six responsive breakpoints. Breakpoints are based on min-width media queries, meaning they affect that breakpoint and all those above it (e.g., .col-sm-4 applies to sm, md, lg, xl, and xxl). This means you can control container and column sizing and behavior by each breakpoint.
@@ -289,6 +298,7 @@ Containers center and horizontally pad your content. Use .container for a respon
 Rows are wrappers for columns. Each column has horizontal padding (called a gutter) for controlling the space between them. This padding is then counteracted on the rows with negative margins to ensure the content in your columns is visually aligned down the left side. Rows also support modifier classes to uniformly apply column sizing and gutter classes to change the spacing of your content.
 Columns are incredibly flexible. There are 12 template columns available per row, allowing you to create different combinations of elements that span any number of columns. Column classes indicate the number of template columns to span (e.g., col-4 spans four). widths are set in percentages so you always have the same relative sizing.
 Gutters are also responsive and customizable. Gutter classes are available across all breakpoints, with all the same sizes as our margin and padding spacing. Change horizontal gutters with .gx-* classes, vertical gutters with .gy-*, or all gutters with .g-* classes. .g-0 is also available to remove gutters.
+
 Sass variables, maps, and mixins power the grid. If you don’t want to use the predefined grid classes in Bootstrap, you can use our grid’s source Sass to create your own with more semantic markup. We also include some CSS custom properties to consume these Sass variables for even greater flexibility for you.
 Equal width
 The following example shows how to get two various-width columns starting at tablets and scaling to large desktops:
